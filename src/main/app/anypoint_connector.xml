@@ -8,7 +8,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/twitter http://www.mulesoft.org/schema/mule/twitter/current/mule-twitter.xsd">
     <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration"/>
-    <twitter:config name="Twitter__Configuration" accessKey="3778617982-YSDj6hvkFXAq5UFAmZKvbYOUdxJWTWlONeBhhZx" accessSecret="4F1oe6GjM7o9nBywrdWUWpT4GATDoOB6hqctdys813GWT" consumerKey="71oXchPm3gIrEMDXUI4h6bYVl" consumerSecret="n0ndWQFoKGS4AeU71Iek1zVvfiiI5cFSwEGB07GkTHNtoDxC4F" doc:name="Twitter: Configuration"/>
+    <twitter:config name="Twitter__Configuration" accessKey="" accessSecret="" consumerKey="" consumerSecret="" doc:name="Twitter: Configuration"/>
     <flow name="anypoint_connectorFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="gettweets" doc:name="HTTP"/>
         <twitter:get-user-timeline-by-screen-name config-ref="Twitter__Configuration" screenName="#[message.inboundProperties.'http.query.params'.sname]" doc:name="Twitter"/>
